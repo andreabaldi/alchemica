@@ -46,6 +46,13 @@ RUN mkdir -p /app/frontend/runtime \
 # 7. FIX ENTRYPOINT
 RUN chmod +x /usr/local/bin/docker-php-entrypoint
 
+# 8. CONFIGURAZIONE SPECIFICA PERMESSI APACHE (Risolve AH01630)
+RUN echo "<Directory /app/frontend/web/>\n\
+    Options Indexes FollowSymLinks\n\
+    AllowOverride All\n\
+    Require all granted\n\
+</Directory>" > /etc/apache2/conf-available/yii2.conf \
+    && a2enconf yii2
 EXPOSE 80
 
 # Usiamo l'utente www-data per far girare Apache in sicurezza se necessario
