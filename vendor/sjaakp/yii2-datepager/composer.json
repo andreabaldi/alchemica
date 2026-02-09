@@ -1,0 +1,23 @@
+{
+    "name": "sjaakp/yii2-datepager",
+    "description": "Page data on date value in Yii2.",
+    "keywords": ["yii", "yii2", "extension", "widget", "paging", "pagination", "gridview", "listview"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sjaak Priester",
+            "email": "sjaak@sjaakpriester.nl",
+            "homepage": "https://sjaakpriester.nl"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "sjaakp/yii2-helpers": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "sjaakp\\datepager\\": ""
+        }
+    }
+}

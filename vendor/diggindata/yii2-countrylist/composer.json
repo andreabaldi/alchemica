@@ -1,0 +1,26 @@
+{
+    "name": "diggindata/yii2-countrylist",
+    "type": "yii2-extension",
+    "minimum-stability": "dev",
+    "description": "Extension to provide a translated list of country names with country codes for the Yii framework",
+    "keywords": ["yii2", "countries", "country", "list", "translated", "i18n"],
+    "license": "BSD-3-Clause",
+    "support": {
+        "source": "https://bitbucket.com/jwerner/yii2-countrylist"
+    },
+    "authors": [
+        {
+            "name": "Joachim Werner",
+            "email": "joachim.werner@diggin-data.de"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "umpirsky/country-list": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "diggindata\\countrylist\\": "src"
+        }
+    }
+}
