@@ -1,4 +1,4 @@
-# Stato: COMPLETO (Yii2 + Imagick + DigitalOcean Fix)
+# Stato: COMPLETO (Yii2 + Imagick + Fix Permessi DigitalOcean 2026)
 FROM php:8.2-apache
 
 # 1. Installazione dipendenze e ImageMagick
@@ -23,23 +23,31 @@ RUN a2enmod rewrite
 # 3. Impostazione cartella di lavoro
 WORKDIR /app
 
-# 4. Configurazione Apache per Yii2 (Punta alla cartella /web)
+# 4. Configurazione Apache per Yii2
 ENV APACHE_DOCUMENT_ROOT /app/frontend/web
 RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf
 RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/conf-available/*.conf
 
-# 5. Copia del codice
+# 5. Copia del codice (Assicurati che i font siano in frontend/web/fonts)
 COPY . /app
 
-# 6. FIX PERMESSI PER IL CLOUD (Importante!)
-# Su DigitalOcean usiamo www-data (utente standard) invece di root per sicurezza
-RUN chown -R www-data:www-data /app \
-    && mkdir -p /app/frontend/runtime /app/frontend/web/assets /app/frontend/web/uploads/targets \
-    && chmod -R 777 /app/frontend/runtime /app/frontend/web/assets /app/frontend/web/uploads
+# 6. FIX PERMESSI DEFINITIVO
+# Creiamo prima le cartelle necessarie, poi cambiamo il proprietario a tutto
+RUN mkdir -p /app/frontend/runtime \
+    /app/frontend/web/assets \
+    /app/frontend/web/uploads/targets \
+    /app/backend/runtime \
+    /app/backend/web/assets \
+    && chown -R www-data:www-data /app \
+    && chmod -R 775 /app/frontend/runtime \
+    && chmod -R 775 /app/frontend/web/assets \
+    && chmod -R 775 /app/frontend/web/uploads
 
-# 7. FIX PER L'ENTRYPOINT (Risolve l'errore che hai visto nel deploy)
+# 7. FIX ENTRYPOINT
 RUN chmod +x /usr/local/bin/docker-php-entrypoint
 
 EXPOSE 80
 
+# Usiamo l'utente www-data per far girare Apache in sicurezza se necessario
+# Ma per ora lasciamo il default per non complicare la connessione alle porte basse
 CMD ["apache2-foreground"]
