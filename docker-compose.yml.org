@@ -1,0 +1,39 @@
+version: '3.2'
+
+services:
+
+  frontend:
+    build:
+      context: .
+      [cite_start]dockerfile: Dockerfile  # Usa il Dockerfile che abbiamo corretto prima [cite: 1]
+    container_name: alcheneg-lab-frontend-1
+    ports:
+      - 20080:80
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./:/app
+    depends_on:
+      - mysql
+
+  backend:
+    build: backend
+    container_name: alcheneg-lab-backend-1
+    ports:
+      - 21080:80
+    volumes:
+      - ~/.composer-docker/cache:/root/.composer/cache:delegated
+      - ./:/app
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    container_name: alcheneg-lab-mysql-1
+    platform: linux/amd64 # Necessario per Mac M1/M2/M3 [cite: 2026-01-29]
+    environment:
+      - MYSQL_ROOT_PASSWORD=verysecret
+      - MYSQL_DATABASE=Alcheneg
+      - MYSQL_USER=alcheneg_user
+      - MYSQL_PASSWORD=alcheneg_pass
+    ports:
+      - "3306:3306"

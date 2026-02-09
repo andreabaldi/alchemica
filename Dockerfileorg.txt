@@ -1,0 +1,46 @@
+# Stato: COMPLETO (Configurazione Unificata Yii2 + Imagick + Mac Permissions Fix)
+FROM php:8.2-apache
+
+# 1. Installazione dipendenze di sistema e ImageMagick (Parametri 28-01-2026)
+RUN apt-get update && apt-get install -y \
+    libmagickwand-dev --no-install-recommends \
+    fonts-dejavu-core \
+    libicu-dev \
+    libzip-dev \
+    && pecl install imagick \
+    && docker-php-ext-enable imagick \
+    && docker-php-ext-install intl zip pdo_mysql
+
+# 2. Abilitiamo il modulo rewrite di Apache per Yii2
+RUN a2enmod rewrite
+
+# 3. Impostazione cartella di lavoro
+WORKDIR /app
+
+# 4. Configurazione Apache per puntare alla cartella web del frontend
+ENV APACHE_DOCUMENT_ROOT /app/frontend/web
+RUN sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/000-default.conf
+RUN sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/conf-available/*.conf
+
+# 5. FIX PERMESSI MAC (Sostituisce il chown che falliva)
+# Modifichiamo l'utente che esegue Apache per evitare il "Forbidden" sui volumi Mac
+RUN sed -i 's/export APACHE_RUN_USER=www-data/export APACHE_RUN_USER=root/g' /etc/apache2/envvars
+RUN sed -i 's/export APACHE_RUN_GROUP=www-data/export APACHE_RUN_GROUP=root/g' /etc/apache2/envvars
+
+# 6. Copia del codice (i permessi saranno gestiti dall'utente root impostato sopra)
+COPY . /app
+
+# Rendiamo comunque scrivibili le cartelle di runtime per sicurezza interna di Yii2
+RUN mkdir -p /app/frontend/runtime /app/frontend/web/assets \
+    && chmod -R 777 /app/frontend/runtime /app/frontend/web/assets
+    # Installa i font base e il supporto per la gestione dei font
+   # Installa le librerie per i font e i font base di Debian
+   RUN apt-get update && apt-get install -y \
+       libfreetype6-dev \
+       libfontconfig1-dev \
+       fonts-dejavu \
+       fontconfig \
+       && rm -rf /var/lib/apt/lists/*
+
+   # Aggiorna la cache dei font di sistema
+   RUN fc-cache -f -v
