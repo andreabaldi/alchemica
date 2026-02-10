@@ -34,19 +34,17 @@ AppAsset::register($this);
             'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
         ],
     ]);
-    $menuItems = [
-        ['label' => 'Home', 'url' => ['/site/index']],
-        ['label' => 'About', 'url' => ['/site/about']],
-            [
-                    'label' => 'Gestione Negativo',
-                    'items' => [
-
-                            ['label' => 'Gestisci Presets', 'url' => ['/presets/index']],
-                            ['label' => 'Lab ', 'url' => ['/lab/index']],
-                            ['label' => 'Linearize ', 'url' => ['/linearize/index']],
-                    ],
-            ],
+    // Voce "Gestione Negativo" visibile solo se l'utente è loggato
+if (!Yii::$app->user->isGuest) {
+    $menuItems[] = [
+        'label' => 'Gestione Negativo',
+        'items' => [
+            ['label' => 'Gestisci Presets', 'url' => ['/presets/index']],
+            ['label' => 'Lab', 'url' => ['/lab/index']],
+            ['label' => 'Linearize', 'url' => ['/linearize/index']],
+        ],
     ];
+}
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
     }
