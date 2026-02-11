@@ -33,7 +33,7 @@ class LutController extends Controller {
     }
 
     public function actionDelete($name) {
-        $path = Yii::getAlias('@frontend/web/uploadS/lutS/') . $name;
+        $path = Yii::getAlias('@frontend/web/uploadS/luts/') . $name;
         if (file_exists($path)) {
             unlink($path);
             Yii::$app->session->setFlash('warning', "File rimosso.");
