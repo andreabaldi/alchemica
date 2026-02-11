@@ -25,7 +25,7 @@ class LutController extends Controller {
     public function actionUpload() {
         $file = UploadedFile::getInstanceByName('lutFile');
         if ($file) {
-            $path = Yii::getAlias('@frontend/web/uploadS/lutS/') . $file->name;
+            $path = Yii::getAlias('@frontend/web/uploads/luts/') . $file->name;
             $file->saveAs($path);
             Yii::$app->session->setFlash('success', "LUT caricata correttamente.");
         }
@@ -33,7 +33,7 @@ class LutController extends Controller {
     }
 
     public function actionDelete($name) {
-        $path = Yii::getAlias('@frontend/web/uploadS/luts/') . $name;
+        $path = Yii::getAlias('@frontend/web/uploads/luts/') . $name;
         if (file_exists($path)) {
             unlink($path);
             Yii::$app->session->setFlash('warning', "File rimosso.");
