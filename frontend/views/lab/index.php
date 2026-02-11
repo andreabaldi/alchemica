@@ -1,23 +1,35 @@
 <?php
-use yii\helpers\Html;
-use yii\widgets\ActiveForm;
-use kartik\select2\Select2;
-use kartik\switchinput\SwitchInput;
-use yii\helpers\ArrayHelper;
-use yii\helpers\Url;
 
-/** @var yii\web\View $this */
-/** @var frontend\models\TargetUploadForm $model */
-/** @var common\models\Presets[] $presets */
-/** @var array $lutList */
-/** @var string|null $resultFile */
-/** @var string|null $previewFile */
+/**
+ * This view file renders the main interface for the Alchemica Lab,
+ * a digital negative processing tool. It includes a form for uploading
+ * images and configuring various processing parameters.
+ *
+ * @var yii\web\View $this The view object.
+ * @var frontend\models\TargetUploadForm $model The form model for target uploads.
+ * @var common\models\Presets[] $presets An array of available processing presets.
+ * @var array $lutList A list of available LUT (Look-Up Table) files.
+ * @var string|null $resultFile The filename of the generated master TIFF file, if any.
+ * @var string|null $previewFile The filename of the generated preview image, if any.
+ */
 
+// Import necessary classes for building the view.
+use yii\helpers\Html; // Yii's helper for generating HTML tags.
+use yii\widgets\ActiveForm; // Yii's widget for creating interactive forms.
+use kartik\select2\Select2; // A powerful Select2 widget from kartik-v extensions.
+use kartik\switchinput\SwitchInput; // A toggle switch input from kartik-v extensions.
+use yii\helpers\ArrayHelper; // Yii's helper for common array manipulations.
+use yii\helpers\Url; // Yii's helper for creating URLs.
+
+// Set the title of the page.
 $this->title = 'Alchemica Lab - Digital Negative Processor';
+// Get the session component.
 $session = Yii::$app->session;
+// Retrieve the last uploaded file name from the session, if it exists. This could be used for pre-filling forms or other features.
 $lastFile = $session->get('last_uploaded_file');
 ?>
 
+<!-- Main container for the lab interface -->
 <div class="lab-index container-fluid py-4 bg-light min-vh-100">
 
     <div class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3 bg-white p-3 rounded shadow-sm">
@@ -33,17 +45,23 @@ $lastFile = $session->get('last_uploaded_file');
                 <?= Html::a('<i class="fas fa-folder-open me-2"></i> ARCHIVIO FILE', ['lab/file-manager'], [
                         'class' => 'btn btn-outline-primary btn-sm fw-bold px-3',
                 ]) ?>
+                <?= Html::a('<i class="fas fa-magic me-2"></i> GESTIONE LUT', ['lut/index'], [
+                        'class' => 'btn btn-outline-success btn-sm fw-bold px-3',
+                ]) ?>
             </div>
             <span class="badge bg-dark p-2 px-3 d-none d-md-inline-block">2026 EDITION</span>
         </div>
     </div>
 
+    <!-- The main form for submitting processing jobs, with multipart/form-data for file uploads. -->
     <?php $form = ActiveForm::begin([
             'options' => ['enctype' => 'multipart/form-data', 'class' => 'animate__animated animate__fadeIn']
     ]); ?>
 
     <div class="row g-4">
+        <!-- Card 1: Input & Technique Selection -->
         <div class="col-xl-4 col-lg-6">
+            <!-- This card handles the primary inputs: the source image and the processing technique (preset). -->
             <div class="card h-100 border-0 shadow-lg overflow-hidden">
                 <div class="card-header bg-secondary text-white py-3">
                     <h5 class="card-title mb-0"><i class="fas fa-file-import me-2"></i> 1. Input & Tecnica</h5>
@@ -110,7 +128,9 @@ $lastFile = $session->get('last_uploaded_file');
             </div>
         </div>
 
+        <!-- Card 2: UV Calibration and additional options -->
         <div class="col-xl-4 col-lg-6">
+            <!-- This card contains settings for advanced calibration and image adjustments. -->
             <div class="card h-100 border-0 shadow-lg border-start border-primary border-5">
                 <div class="card-header bg-primary text-white py-3">
                     <h5 class="card-title mb-0"><i class="fas fa-microchip me-2"></i> 2. Calibrazione UV</h5>
@@ -184,7 +204,9 @@ $lastFile = $session->get('last_uploaded_file');
             </div>
         </div>
 
+        <!-- Card 3: Output Layout and Dimensions -->
         <div class="col-xl-4 col-lg-12">
+            <!-- This card is for configuring the final output layout, such as paper size and image grid arrangement. -->
             <div class="card h-100 border-0 shadow-lg">
                 <div class="card-header bg-dark text-white py-3">
                     <h5 class="card-title mb-0"><i class="fas fa-layer-group me-2"></i> 3. Layout & Dimensioni</h5>
@@ -226,6 +248,7 @@ $lastFile = $session->get('last_uploaded_file');
     </div>
     <?php ActiveForm::end(); ?>
 
+    <!-- Result section: displayed only after a file has been processed and a preview is available. -->
     <?php if ($previewFile): ?>
         <div class="mt-5 pt-4 animate__animated animate__fadeInUp text-center">
             <h2 class="fw-bold text-secondary text-uppercase mb-4">Render Finale</h2>
@@ -247,7 +270,8 @@ $lastFile = $session->get('last_uploaded_file');
 </div>
 
 <?php
-// Preparazione Mappa Preset per il Javascript
+// Prepare a PHP array of preset data to be encoded as JSON and used by client-side JavaScript.
+// This map allows the UI to dynamically update based on the selected preset without reloading the page.
 $presetsMap = [];
 foreach ($presets as $p) {
     $presetsMap[$p->id] = [
@@ -255,61 +279,82 @@ foreach ($presets as $p) {
             'mode' => $p->gamma_mode,
             'base' => number_format($p->gamma_base, 2),
             'delta' => number_format($p->gamma_step, 2),
-            'list' => $p->gamma_custom_list // afterFind lo ha già reso array
+            'list' => $p->gamma_custom_list // The 'afterFind' method in the Preset model already converts this from a string to an array.
     ];
 }
+// Encode the preset map into a JSON string for embedding in the JavaScript.
 $presetsJson = json_encode($presetsMap);
 
+// Register the main JavaScript block for this view.
 $this->registerJs("
+    // Store the preset data from PHP in a JavaScript constant.
     const presetsData = {$presetsJson};
+    // Cache jQuery selector for the grid size dropdown for performance.
     const gridSizeSelect = $('#targetuploadform-gridsize');
 
+    /**
+     * Updates the UI elements related to gamma processing based on the selected preset.
+     * It shows/hides information boxes and enables/disables controls accordingly.
+     */
     function updateProcessingUI() {
         const id = $('#preset-selector').val();
         
+        // If no preset is selected, hide the info box and ensure grid size is enabled.
         if (!id || !presetsData[id]) {
             $('#gamma-info-box').addClass('d-none');
             gridSizeSelect.prop('disabled', false).parent().css('opacity', '1');
             return;
         }
 
+        // A preset is selected, so get its data.
         const data = presetsData[id];
+        // Show the info box and populate it with general preset data.
         $('#gamma-info-box').removeClass('d-none');
         $('#info-profile-name').text(data.name);
         $('#info-mode-badge').text(data.mode.toUpperCase());
 
+        // Handle UI changes based on the preset's gamma mode ('list' or 'step').
         if (data.mode === 'list') {
-            // --- MODALITÀ LISTA ---
+            // --- 'LIST' MODE ---
+            // The preset defines a specific list of gamma values.
             $('#area-step').addClass('d-none');
             $('#area-list').removeClass('d-none');
             
+            // In 'list' mode, the grid size is determined by the number of gamma values, so disable the dropdown.
             gridSizeSelect.prop('disabled', true).parent().css('opacity', '0.5');
             
             let tags = '';
             if (data.list && data.list.length > 0) {
+                // Generate HTML tags for each gamma value in the list.
                 data.list.forEach(val => {
-                    // FIX: Uso la concatenazione classica invece del template literal con $
+                    // Note: Using standard string concatenation to avoid issues with PHP's variable parsing in double-quoted strings.
                     tags += '<span class=\"badge bg-primary\" style=\"font-size:0.7rem\">' + parseFloat(val).toFixed(2) + '</span> ';
                 });
             } else {
                 tags = '<span class=\"text-danger small\">Lista vuota!</span>';
             }
+            // Update the UI with the generated tags.
             $('#info-gamma-list-tags').html(tags);
 
         } else {
-            // --- MODALITÀ STEP ---
+            // --- 'STEP' MODE ---
+            // The preset defines a base gamma and a step increment.
             $('#area-list').addClass('d-none');
             $('#area-step').removeClass('d-none');
             
+            // In 'step' mode, the user can choose the grid size, so ensure it's enabled.
             gridSizeSelect.prop('disabled', false).parent().css('opacity', '1');
             
+            // Display the base gamma and step values.
             $('#info-gamma-base').text(data.base);
             $('#info-gamma-delta').text('+' + data.delta);
         }
     }
 
+    // Run the function on page load to set the initial UI state.
     updateProcessingUI();
 
+    // Attach an event listener to the preset selector to update the UI on change.
     $('#preset-selector').on('change', function() {
         updateProcessingUI();
     });

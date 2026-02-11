@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PHPUnit">
+    <option name="directories">
+      <list>
+        <option value="$PROJECT_DIR$/vendor-org/yiisoft/yii2-bootstrap5/tests" />
+        <option value="$PROJECT_DIR$/vendor-org/codeception/stub/tests" />
+        <option value="$PROJECT_DIR$/vendor-org/cebe/markdown/tests" />
+        <option value="$PROJECT_DIR$/vendor-org/maennchen/zipstream-php/test" />
+        <option value="$PROJECT_DIR$/vendor-org/codeception/verify/tests" />
+      </list>
+    </option>
+  </component>
+</project>

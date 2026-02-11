@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/backend" isTestSource="false" packagePrefix="app" />
+      <sourceFolder url="file://$MODULE_DIR$/backend/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/common/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/frontend/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/frontend/web/assets/54fdf8c2/" isTestSource="false" packagePrefix="kartik\plugins\fileinput\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/behat/gherkin/src" isTestSource="false" packagePrefix="Behat\Gherkin\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/behat/gherkin/tests" isTestSource="true" packagePrefix="Tests\Behat\Gherkin\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/cebe/markdown/" isTestSource="false" packagePrefix="cebe\markdown\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/cebe/markdown/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/codeception/codeception/ext" isTestSource="false" packagePrefix="Codeception\Extension\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/codeception/codeception/src/Codeception" isTestSource="false" packagePrefix="Codeception\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/codeception/stub/src" isTestSource="false" packagePrefix="Codeception\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/codeception/stub/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/codeception/verify/src/Codeception" isTestSource="false" packagePrefix="Codeception\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/codeception/verify/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/composer/pcre/src" isTestSource="false" packagePrefix="Composer\Pcre\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/composer/pcre/tests" isTestSource="true" packagePrefix="Composer\Pcre\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/diggindata/yii2-countrylist/src" isTestSource="false" packagePrefix="diggindata\countrylist\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/doctrine/instantiator/src/Doctrine/Instantiator" isTestSource="false" packagePrefix="Doctrine\Instantiator\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/doctrine/instantiator/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/doctrine/lexer/src" isTestSource="false" packagePrefix="Doctrine\Common\Lexer\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/doctrine/lexer/tests" isTestSource="true" packagePrefix="Doctrine\Tests\Common\Lexer\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/egulias/email-validator/src" isTestSource="false" packagePrefix="Egulias\EmailValidator\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/egulias/email-validator/tests" isTestSource="true" packagePrefix="Egulias\EmailValidator\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/ezyang/htmlpurifier/library" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/fakerphp/faker/src/Faker" isTestSource="false" packagePrefix="Faker\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/fakerphp/faker/test/Faker" isTestSource="true" packagePrefix="Faker\Test\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/fakerphp/faker/test/Fixture" isTestSource="true" packagePrefix="Faker\Test\Fixture\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/giggsey/libphonenumber-for-php/build" isTestSource="true" packagePrefix="libphonenumber\buildtools\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/giggsey/libphonenumber-for-php/src" isTestSource="false" packagePrefix="libphonenumber\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/giggsey/libphonenumber-for-php/tests" isTestSource="true" packagePrefix="libphonenumber\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/giggsey/locale/build/Build" isTestSource="true" packagePrefix="Giggsey\Locale\Build\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/giggsey/locale/src" isTestSource="false" packagePrefix="Giggsey\Locale\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/giggsey/locale/tests" isTestSource="true" packagePrefix="Giggsey\Locale\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/guzzlehttp/psr7/src" isTestSource="false" packagePrefix="GuzzleHttp\Psr7\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/guzzlehttp/psr7/tests" isTestSource="true" packagePrefix="GuzzleHttp\Tests\Psr7\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/karataserkan/yii2-multi-dataprovider/" isTestSource="false" packagePrefix="karataserkan\yii2MultiDataProvider\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/bootstrap-fileinput/" isTestSource="false" packagePrefix="kartik\plugins\fileinput\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/bootstrap-popover-x/" isTestSource="false" packagePrefix="kartik\plugins\popover\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-bootstrap5-dropdown/src" isTestSource="false" packagePrefix="kartik\bs5dropdown\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-builder/src" isTestSource="false" packagePrefix="kartik\builder\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-date-range/src" isTestSource="false" packagePrefix="kartik\daterange\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-dialog/src" isTestSource="false" packagePrefix="kartik\dialog\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-dynagrid/src" isTestSource="false" packagePrefix="kartik\dynagrid\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-editable/src" isTestSource="false" packagePrefix="kartik\editable\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-export/src" isTestSource="false" packagePrefix="kartik\export\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-field-range/src" isTestSource="false" packagePrefix="kartik\field\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-grid/src" isTestSource="false" packagePrefix="kartik\grid\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-helpers/src" isTestSource="false" packagePrefix="kartik\helpers\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-krajee-base/src" isTestSource="false" packagePrefix="kartik\base\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-mpdf/src" isTestSource="false" packagePrefix="kartik\mpdf\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-popover-x/src" isTestSource="false" packagePrefix="kartik\popover\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-sortable/src" isTestSource="false" packagePrefix="kartik\sortable\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-validators/src" isTestSource="false" packagePrefix="kartik\validators\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-activeform/src" isTestSource="false" packagePrefix="kartik\form\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-colorinput/src" isTestSource="false" packagePrefix="kartik\color\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-datepicker/src" isTestSource="false" packagePrefix="kartik\date\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-datetimepicker/src" isTestSource="false" packagePrefix="kartik\datetime\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-fileinput/src" isTestSource="false" packagePrefix="kartik\file\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-growl/src" isTestSource="false" packagePrefix="kartik\growl\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-select2/src" isTestSource="false" packagePrefix="kartik\select2\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-sidenav/" isTestSource="false" packagePrefix="kartik\sidenav\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-spinner/src" isTestSource="false" packagePrefix="kartik\spinner\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-switchinput/" isTestSource="false" packagePrefix="kartik\switchinput\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/kartik-v/yii2-widget-touchspin/src" isTestSource="false" packagePrefix="kartik\touchspin\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/maennchen/zipstream-php/src" isTestSource="false" packagePrefix="ZipStream\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/maennchen/zipstream-php/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/maennchen/zipstream-php/test" isTestSource="true" packagePrefix="ZipStream\Test\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/markbaker/complex/classes/src" isTestSource="false" packagePrefix="Complex\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/markbaker/matrix/classes/src" isTestSource="false" packagePrefix="Matrix\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/markbaker/matrix/unitTests/classes/src" isTestSource="true" packagePrefix="MatrixTest\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/masterminds/html5/src" isTestSource="false" packagePrefix="Masterminds\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/masterminds/html5/test/HTML5" isTestSource="true" packagePrefix="Masterminds\HTML5\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/mpdf/mpdf/src" isTestSource="false" packagePrefix="Mpdf\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/mpdf/mpdf/tests/Mpdf" isTestSource="true" packagePrefix="Mpdf\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/mpdf/psr-http-message-shim/src" isTestSource="false" packagePrefix="Mpdf\PsrHttpMessageShim\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/mpdf/psr-log-aware-trait/src" isTestSource="false" packagePrefix="Mpdf\PsrLogAwareTrait\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/myclabs/deep-copy/fixtures" isTestSource="true" packagePrefix="DeepCopy\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/myclabs/deep-copy/src/DeepCopy" isTestSource="false" packagePrefix="DeepCopy\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/myclabs/deep-copy/tests/DeepCopyTest" isTestSource="true" packagePrefix="DeepCopyTest\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/nikic/php-parser/lib/PhpParser" isTestSource="false" packagePrefix="PhpParser\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/nikic/php-parser/test/PhpParser" isTestSource="true" packagePrefix="PhpParser\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/phpoffice/phpspreadsheet/infra" isTestSource="true" packagePrefix="PhpOffice\PhpSpreadsheetInfra\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/phpoffice/phpspreadsheet/src/PhpSpreadsheet" isTestSource="false" packagePrefix="PhpOffice\PhpSpreadsheet\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/phpoffice/phpspreadsheet/tests/PhpSpreadsheetTests" isTestSource="true" packagePrefix="PhpOffice\PhpSpreadsheetTests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/phpspec/php-diff/lib" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/psr/container/src" isTestSource="false" packagePrefix="Psr\Container\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/psr/event-dispatcher/src" isTestSource="false" packagePrefix="Psr\EventDispatcher\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/psr/http-factory/src" isTestSource="false" packagePrefix="Psr\Http\Message\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/psr/http-message/src" isTestSource="false" packagePrefix="Psr\Http\Message\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/psr/log/src" isTestSource="false" packagePrefix="Psr\Log\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/psr/simple-cache/src" isTestSource="false" packagePrefix="Psr\SimpleCache\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/psy/psysh/build/src" isTestSource="false" packagePrefix="Psy\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/psy/psysh/src" isTestSource="false" packagePrefix="Psy\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/psy/psysh/test" isTestSource="true" packagePrefix="Psy\Test\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/ralouphie/getallheaders/tests" isTestSource="true" packagePrefix="getallheaders\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/setasign/fpdi/src" isTestSource="false" packagePrefix="setasign\Fpdi\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/setasign/fpdi/tests" isTestSource="true" packagePrefix="setasign\Fpdi\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/sjaakp/yii2-alphapager/" isTestSource="false" packagePrefix="sjaakp\alphapager\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/sjaakp/yii2-datepager/" isTestSource="false" packagePrefix="sjaakp\datepager\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/sjaakp/yii2-gcharts/" isTestSource="false" packagePrefix="sjaakp\gcharts\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/sjaakp/yii2-helpers/" isTestSource="false" packagePrefix="sjaakp\helpers\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/browser-kit/" isTestSource="false" packagePrefix="Symfony\Component\BrowserKit\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/console/" isTestSource="false" packagePrefix="Symfony\Component\Console\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/css-selector/" isTestSource="false" packagePrefix="Symfony\Component\CssSelector\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/dom-crawler/" isTestSource="false" packagePrefix="Symfony\Component\DomCrawler\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/event-dispatcher-contracts/" isTestSource="false" packagePrefix="Symfony\Contracts\EventDispatcher\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/event-dispatcher/" isTestSource="false" packagePrefix="Symfony\Component\EventDispatcher\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/finder/" isTestSource="false" packagePrefix="Symfony\Component\Finder\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/mailer/" isTestSource="false" packagePrefix="Symfony\Component\Mailer\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/mime/" isTestSource="false" packagePrefix="Symfony\Component\Mime\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/polyfill-ctype/" isTestSource="false" packagePrefix="Symfony\Polyfill\Ctype\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/polyfill-intl-grapheme/" isTestSource="false" packagePrefix="Symfony\Polyfill\Intl\Grapheme\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/polyfill-intl-idn/" isTestSource="false" packagePrefix="Symfony\Polyfill\Intl\Idn\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/polyfill-intl-normalizer/" isTestSource="false" packagePrefix="Symfony\Polyfill\Intl\Normalizer\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/polyfill-mbstring/" isTestSource="false" packagePrefix="Symfony\Polyfill\Mbstring\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/service-contracts/" isTestSource="false" packagePrefix="Symfony\Contracts\Service\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/string/" isTestSource="false" packagePrefix="Symfony\Component\String\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/var-dumper/" isTestSource="false" packagePrefix="Symfony\Component\VarDumper\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/symfony/yaml/" isTestSource="false" packagePrefix="Symfony\Component\Yaml\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-bootstrap5/src" isTestSource="false" packagePrefix="yii\bootstrap5\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-bootstrap5/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-bootstrap5/tests" isTestSource="true" packagePrefix="yiiunit\extensions\bootstrap5\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-composer/" isTestSource="false" packagePrefix="yii\composer\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-composer/tests" isTestSource="true" packagePrefix="tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-debug/src" isTestSource="false" packagePrefix="yii\debug\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-debug/tests" isTestSource="true" packagePrefix="yiiunit\debug\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-faker/src" isTestSource="false" packagePrefix="yii\faker\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-gii/src" isTestSource="false" packagePrefix="yii\gii\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-gii/tests" isTestSource="true" packagePrefix="yiiunit\gii\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-jui/" isTestSource="false" packagePrefix="yii\jui\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2-symfonymailer/src" isTestSource="false" packagePrefix="yii\symfonymailer\" />
+      <sourceFolder url="file://$MODULE_DIR$/vendor-org/yiisoft/yii2/" isTestSource="false" packagePrefix="yii\" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/behat/gherkin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower-asset/inputmask" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower-asset/jquery" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower-asset/jquery-ui" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower-asset/punycode" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/bower-asset/yii2-pjax" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/cebe/markdown" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/codeception" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/lib-asserts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/lib-innerbrowser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/lib-web" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/module-yii2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/stub" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/codeception/verify" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/diggindata/yii2-countrylist" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ezyang/htmlpurifier" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/giggsey/libphonenumber-for-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/giggsey/locale" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/karataserkan/yii2-multi-dataprovider" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/bootstrap-fileinput" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/bootstrap-popover-x" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-bootstrap5-dropdown" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-builder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-date-range" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-dialog" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-dynagrid" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-editable" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-export" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-field-range" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-grid" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-helpers" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-krajee-base" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-mpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-popover-x" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-sortable" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-validators" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-activeform" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-colorinput" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-datepicker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-datetimepicker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-fileinput" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-growl" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-select2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-sidenav" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-spinner" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-switchinput" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/kartik-v/yii2-widget-touchspin" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/koolreport/core" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/maennchen/zipstream-php" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/markbaker/complex" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/markbaker/matrix" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/masterminds/html5" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mpdf/mpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mpdf/psr-http-message-shim" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/mpdf/psr-log-aware-trait" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/paragonie/random_compat" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpspec/php-diff" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/select2/select2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/setasign/fpdi" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sjaakp/yii2-alphapager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sjaakp/yii2-datepager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sjaakp/yii2-gcharts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/sjaakp/yii2-helpers" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/browser-kit" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dom-crawler" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/tecnickcom/tcpdf" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/twbs/bootstrap" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/umpirsky/country-list" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-bootstrap5" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-debug" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-faker" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-gii" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-jui" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/yiisoft/yii2-symfonymailer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
