@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Local configuration for Alchemica Lab.
+ * Credenziali SMTP rimosse per sicurezza e invio reale disabilitato.
+ */
+
 return [
     'components' => [
         'db' => [
@@ -9,22 +14,23 @@ return [
             'password' => 'alcheneg_pass',
             'charset' => 'utf8',
         ],
-        
 
         'mailer' => [
             'class' => \yii\symfonymailer\Mailer::class,
             'viewPath' => '@common/mail',
-            // Impostato su false per inviare email reali
-            'useFileTransport' => false,
-            
+            /**
+             * MODALITÀ BETA: useFileTransport è true.
+             * Le email non vengono spedite ma salvate in: frontend/runtime/mail/
+             */
+            'useFileTransport' => true,
+
             'transport' => [
-                'scheme' => 'smtps', // SSL Implicito per porta 465
+                'scheme' => 'smtps',
                 'host' => 'smtp.gmail.com',
-                'username' => 'baldi.andrea@gmail.com',
-                'password' => 'nxqbucpedwqlofae',
+                'username' => '', // Svuotato per sicurezza
+                'password' => '', // Svuotato per sicurezza
                 'port' => 465,
-                // DSN ricostruito correttamente per SymfonyMailer OK
-                'dsn' => 'smtps://baldi.andrea@gmail.com:nxqbucpedwqlofae@smtp.gmail.com:465',
+                // DSN rimosso per evitare esposizione credenziali
             ],
         ],
     ],
