@@ -228,7 +228,7 @@ $lastFile = $session->get('last_uploaded_file');
                     </div>
 
                     <?= $form->field($model, 'gridSize')->dropDownList([
-                            1 => '1 Immagine (Full Page)',
+                            1 => '1 Immagin3 [Full Page]',
                             2 => '2 Immagini (Side by Side)',
                             4 => '4 Immagini (2x2 Grid)',
                             6 => '6 Immagini (2x3 Grid)',

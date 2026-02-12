@@ -7,7 +7,7 @@ use yii\base\Model;
 use yii\web\UploadedFile;
 
 /**
- * TargetUploadForm - Gestione parametri per Alchemich Engine
+ * TargetUploadForm - Gestione parametri per Alchemich Engine AB
  */
 class TargetUploadForm extends Model
 {
