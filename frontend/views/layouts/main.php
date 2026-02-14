@@ -40,8 +40,9 @@ if (!Yii::$app->user->isGuest) {
         'label' => 'Gestione Negativo',
         'items' => [
             ['label' => 'Gestisci Presets', 'url' => ['/presets/index']],
-            ['label' => 'Lab', 'url' => ['/lab/index']],
+            ['label' => 'Exposure Calculatar', 'url' => ['/lab/exposure-tool']],
             ['label' => 'Linearize', 'url' => ['/linearize/index']],
+                ['label' => 'Lab', 'url' => ['/lab/index']],
         ],
     ];
 }

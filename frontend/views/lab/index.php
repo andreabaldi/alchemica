@@ -215,7 +215,7 @@ $lastFile = $session->get('last_uploaded_file');
                     <div class="row g-3">
                         <div class="col-6">
                             <?= $form->field($model, 'paperFormat')->widget(Select2::class, [
-                                    'data' => ['A4' => 'A4', 'A3' => 'A3', 'A3+' => 'A3 Plus', 'Letter' => 'LTR','Fixon' => 'Fixon'],
+                                    'data' => ['A4' => 'A4', 'A3' => 'A3', 'A3+' => 'A3 Plus', 'Letter' => 'LTR','Fixon' => 'fixon'],
                                     'pluginOptions' => ['minimumResultsForSearch' => -1]
                             ]) ?>
                         </div>

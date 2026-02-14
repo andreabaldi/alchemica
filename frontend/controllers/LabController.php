@@ -8,6 +8,7 @@ use yii\web\UploadedFile;
 use yii\web\NotFoundHttpException;
 use common\models\Presets;
 use frontend\models\TargetUploadForm;
+use frontend\models\ExposureCalculator;
 use common\components\AlchemichEngine;
 
 class LabController extends Controller
@@ -210,4 +211,42 @@ class LabController extends Controller
         $session->remove('target_params');
         return $this->redirect(['index']);
     }
+
+
+    /**
+     * Azione per il Calcolatore Esposizione Alchemica Lab
+     */
+    public function actionExposureTool()
+    {
+        $model = new \frontend\models\ExposureCalculator();
+
+        // Se la richiesta è AJAX e di tipo POST
+        if (Yii::$app->request->isAjax && Yii::$app->request->isPost) {
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            if ($model->load(Yii::$app->request->post())) {
+                return $model->calculate();
+            } else {
+                return ['success' => false, 'error' => 'Dati non caricati correttamente'];
+            }
+        }
+
+        return $this->render('exposure-tool', [
+            'model' => $model,
+        ]);
+    }
+    public function actionExposureCalculate()
+    {
+        $model = new \app\models\ExposureCalculator();
+        if ($model->load(Yii::$app->request->post())) {
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            return [
+                'success' => true,
+                'data' => $model->calculate(),
+                'is_complete' => true // Come richiesto dai parametri utente
+            ];
+        }
+        return ['success' => false];
+    }
+
+
 }
