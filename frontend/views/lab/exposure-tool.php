@@ -39,7 +39,7 @@ use yii\widgets\ActiveForm;
 
                                 <div id="input-units-wrap" class="input-group shadow-sm">
                                     <button type="button" class="btn btn-dark btn-adj" data-target="baseunits" data-val="-50">-</button>
-                                    <?= Html::activeTextInput($model, 'baseUnits', ['class' => 'form-control text-center fw-bold']) ?>
+                                    <?= Html::activeTextInput($model, 'baseUnits', ['id' => 'exposurecalculator-baseunits', 'class' => 'form-control text-center fw-bold']) ?>
                                     <button type="button" class="btn btn-dark btn-adj" data-target="baseunits" data-val="50">+</button>
                                 </div>
 
@@ -47,13 +47,13 @@ use yii\widgets\ActiveForm;
                                     <div class="d-flex flex-column gap-2">
                                         <div class="input-group input-group-sm shadow-sm">
                                             <button type="button" class="btn btn-dark btn-adj" data-target="baseminutes" data-val="-1">-</button>
-                                            <?= Html::activeTextInput($model, 'baseMinutes', ['class' => 'form-control text-center fw-bold']) ?>
+                                            <?= Html::activeTextInput($model, 'baseMinutes', ['id' => 'exposurecalculator-baseminutes', 'class' => 'form-control text-center fw-bold']) ?>
                                             <button type="button" class="btn btn-dark btn-adj" data-target="baseminutes" data-val="1">+</button>
                                             <span class="input-group-text" style="width:40px">m</span>
                                         </div>
                                         <div class="input-group input-group-sm shadow-sm">
                                             <button type="button" class="btn btn-dark btn-adj" data-target="baseseconds" data-val="-5">-5</button>
-                                            <?= Html::activeTextInput($model, 'baseSeconds', ['class' => 'form-control text-center']) ?>
+                                            <?= Html::activeTextInput($model, 'baseSeconds', ['id' => 'exposurecalculator-baseseconds', 'class' => 'form-control text-center']) ?>
                                             <button type="button" class="btn btn-dark btn-adj" data-target="baseseconds" data-val="5">+5</button>
                                             <span class="input-group-text" style="width:40px">s</span>
                                         </div>
@@ -109,6 +109,15 @@ use yii\widgets\ActiveForm;
             </div>
 
             <div class="col-md-4">
+                <div class="alert bg-white shadow-sm border-start border-info border-4 mb-3 py-2 px-3">
+                    <small class="text-info fw-bold d-block mb-1 text-uppercase" style="letter-spacing: 1px;">
+                        <i class="fas fa-mouse-pointer me-1"></i> Interactive Guide
+                    </small>
+                    <ul class="list-unstyled mb-0" style="font-size: 0.75rem; color: #444; line-height: 1.4;">
+                        <li><i class="fas fa-arrows-alt-v fa-fw text-muted"></i> <strong>Drag Top/Bottom:</strong> Set DMAX & DMIN.</li>
+                        <li><i class="fas fa-hand-rock fa-fw text-muted"></i> <strong>Drag Center:</strong> Move the entire scale.</li>
+                    </ul>
+                </div>
                 <div class="wedge-container bg-white shadow-sm p-4 rounded border d-flex justify-content-center">
                     <div class="wedge-flex-box d-flex">
                         <div id="labels-container" class="d-flex flex-column text-end"></div>
@@ -208,7 +217,6 @@ function updateScale() {
     $('#res-header').removeClass('theme-bw theme-cyan theme-vdb theme-pal').addClass(t.css);
 }
 
-// DRAG LOGIC
 $(document).on('mousedown', '.zone', function(e) {
     isDragging = $(this).attr('class').split(' ')[1];
     startY = e.pageY; startDmax = dmax; startDmin = dmin;
@@ -232,20 +240,18 @@ $(document).on('mousemove', function(e) {
 
 $(document).on('mouseup', function() { isDragging = null; });
 
-// +/- BUTTONS
 $('.btn-adj').click(function() {
     let target = $(this).data('target');
     let input = $('input[id$="' + target + '"]');
     let val = parseFloat(input.val()) || 0;
     let newVal = val + parseFloat($(this).data('val'));
     if (target === 'baseseconds') {
-        if (newVal < 0) newVal = 59;
+        if (newVal < 0) newVal = 55;
         if (newVal >= 60) newVal = 0;
     }
     input.val(newVal);
 });
 
-// EVENTI CHANGE
 $('#wedge-type').on('change', function() { resetResults(); buildWedge(); });
 $('#process-color').on('change', updateScale);
 $('#input-type').change(function() {
@@ -253,7 +259,6 @@ $('#input-type').change(function() {
     else { $('#input-time-wrap').addClass('d-none'); $('#input-units-wrap').removeClass('d-none'); }
 });
 
-// CALCOLO AJAX
 $('#btn-calc').click(function() {
     $.post(window.location.href, $('#stouffer-form').serialize(), function(r) {
         if(r.success) {

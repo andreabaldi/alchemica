@@ -11,6 +11,7 @@ class ExposureCalculator extends Model {
     public $dmaxStep = 1;
     public $dminStep = 31;
 
+
     public function rules() {
         return [
             [['inputType', 'dmaxStep', 'dminStep', 'wedgeType'], 'required'],
